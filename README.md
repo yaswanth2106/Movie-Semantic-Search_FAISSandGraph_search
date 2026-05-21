@@ -9,17 +9,6 @@ The results from both methods are merged into a **hybrid ranking** (weighted by 
 
 ---
 
-## Table of Contents
-- [Project Overview](#project-overview)
-- [Architecture](#architecture)
-- [Setup & Installation](#setup--installation)
-- [Running the App](#running-the-app)
-- [File Overview](#file-overview)
-- [How It Works](#how-it-works)
-- [Customization](#customization)
-- [License](#license)
-
----
 
 ## Architecture
 ```
