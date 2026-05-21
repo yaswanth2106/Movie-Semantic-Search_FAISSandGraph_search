@@ -5,7 +5,7 @@ import json
 import cohere
 
 
-CSV_PATH = "movies.csv"   # your dataset
+CSV_PATH = "movies.csv"   
 TOP_K = 5
 COHERE_API_KEY = "key here!!!!!!!!!!!!!!!!!!!!!!!!"
 
@@ -47,7 +47,7 @@ for _, row in df.iterrows():
     for comp in split_vals(row["production_companies"]):
         G.add_edge(movie_node, f"company:{comp}")
 
-print(f"✅ Graph built with {G.number_of_nodes()} nodes and {G.number_of_edges()} edges")
+print(f"Graph built with {G.number_of_nodes()} nodes and {G.number_of_edges()} edges")
 
 
 def build_graph_vocab(G):

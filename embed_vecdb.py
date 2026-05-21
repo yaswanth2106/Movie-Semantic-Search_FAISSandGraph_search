@@ -37,7 +37,7 @@ def build_text(row):
 df["embed_text"] = df.apply(build_text, axis=1)
 
 
-model = SentenceTransformer(MODEL_NAME)   # use if cuda_test.py is true, device = "cuda"
+model = SentenceTransformer(MODEL_NAME)   
 
 
 embeddings = model.encode(
@@ -49,11 +49,11 @@ embeddings = model.encode(
 )
 
 
-EMBED_DIM = embeddings.shape[1]   # guarantees correct size
+EMBED_DIM = embeddings.shape[1]   
 index = faiss.IndexFlatIP(EMBED_DIM)  
 index.add(embeddings)
 
-print(f"✅ FAISS index built with {index.ntotal} movies")
+print(f" FAISS index built with {index.ntotal} movies")
 
 
 
@@ -85,4 +85,4 @@ faiss.write_index(index, "movie_index.faiss")
 META_PATH = "movie_metadata.pkl"
 df.drop(columns=["embed_text"]).to_pickle(META_PATH)
 
-print("✅ Training complete. Artifacts saved.")
+print(" Training complete. Artifacts saved.")
